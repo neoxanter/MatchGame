@@ -52,9 +52,17 @@ namespace MatchGame
             }
         }
 
+        TextBlock lastTextBlockClocked;
+        bool findingMatch = false;
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            TextBlock textBlock = (TextBlock)sender;
+            if (findingMatch == false)
+            {
+                textBlock.Visibility = Visibility.Hidden;
+                lastTextBlockClicked = textBlock;
+                findingMatch = true;
+            }
         }
     }
 }
