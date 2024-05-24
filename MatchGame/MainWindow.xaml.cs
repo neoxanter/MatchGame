@@ -63,6 +63,11 @@ namespace MatchGame
                 lastTextBlockClicked = textBlock;
                 findingMatch = true;
             }
+            else if (textBlock.Text == lastTextBlockClicked.Text)
+            {
+                textBlock.Visibility |= Visibility.Hidden;
+                findingMatch = false;
+            }
         }
     }
 }
