@@ -15,11 +15,16 @@ using System.Windows.Shapes;
 
 namespace MatchGame
 {
+    using System.Windows.Threading;
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer timer = new DispatcherTimer();
+        int tenthOfSecondElapsed;
+        int matchesFound;
+
         public MainWindow()
         {
             InitializeComponent();
