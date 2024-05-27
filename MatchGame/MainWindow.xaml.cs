@@ -72,6 +72,10 @@ namespace MatchGame
                 animalEmoji.RemoveAt(index);
                 }
             }
+
+            timer.Start();
+            tenthOfSecondElapsed = 0;
+            matchesFound = 0;
         }
 
         TextBlock lastTextBlockClicked;
