@@ -86,5 +86,13 @@ namespace MatchGame
                 findingMatch = false;
             }
         }
+
+        private void timeTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (matchesFound == 8)
+            {
+                SetUpGame();
+            }
+        }
     }
 }
