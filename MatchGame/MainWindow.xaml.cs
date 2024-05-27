@@ -36,7 +36,13 @@ namespace MatchGame
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            tenthOfSecondElapsed++;
+            timeTextBlock.Text = (tenthOfSecondElapsed / 10f).ToString("0.0s");
+            if(matchesFound == 8)
+            {
+                timer.Stop();
+                timeTextBlock.Text = timeTextBlock.Text = " - Play again?";
+            }
         }
 
         private void SetUpGame()
